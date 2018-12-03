@@ -3,12 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-    alertText(){
-        alert('now you know how to handle onclick event')
+    state={number:0}
+    updateNumber=()=>{
+        this.setState({number:1})
     }
     render() {
-        return ( <div><button onClick={this.alertText}>Hello World!</button>
-        <span>number :0</span></div>
+        return ( <div><button onClick={this.updateNumber}>Hello World!</button>
+        <span>number :{this.state.number}</span></div>
         );
     }
 }
