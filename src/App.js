@@ -3,10 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-    state={number:0}
+    state={number:this.props.defaultNum}
     updateNumber=()=>{
         // this.setState({number:1})
-        this.setState({number:this.props.defaultfunction(this.props.defaultNum)})
+        this.setState({number:this.props.defaultfunction(this.state.number)})
     }
     render() {
         return ( <div><button onClick={this.updateNumber}>Hello World!</button>
